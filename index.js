@@ -65,12 +65,23 @@ class CoffeeShop {
 		return total.toFixed(2)
 	}
 	cheapest_item(){
+		let helper = ""
 		let smallest=100000
 		for(item in this.menu){
 			if(this.menu[item].price<smallest) {smallest = this.menu[item].price}
 		}
-		return smallest
+		// if (this.menu.find(element => {
+		// 	if(element.price === smallest){
+		// 		helper =element.item}}))
+		// return helper
+		for(item in this.menu){
+			if(this.menu[item].price ===smallest){
+				return this.menu[item].item
+			}
+		}
+	
 	}
+
 	drinks_only(){
 		const drinks = []
 		for(item in this.menu){
