@@ -95,6 +95,7 @@ class CoffeeShop {
 			if(this.menu[item].type==="food"){foods.push(this.menu[item].item)}
 		}
 		return foods
+		
 	}
 	
 
